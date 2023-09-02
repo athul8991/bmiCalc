@@ -7,7 +7,8 @@
 body{
     text-align: center;
     /* padding: 20px; */
-    background: rgb(232, 226, 226);
+    background: rgb(230, 233, 230);
+    /* background-image: linear-gradient(to right bottom, rgb(170, 170, 170),rgb(200, 200, 200)); */
 }
 h1{
     color: rgb(127, 149, 150);
@@ -37,6 +38,13 @@ h1{
 .box-center{
     position: relative;
 }
+.box-center h4 {
+    margin-top: 20px;
+    background: gray;
+    display: inline-block;
+    padding: 1px 2px;
+    
+}
 
 label{
     font-size: 18px;
@@ -51,6 +59,7 @@ input[type=text]{
     font-size: 30px;
     text-align: center;
     font-weight:800;
+    box-shadow: 3px 3px rgb(109, 108, 108) inset;
     
 }
 
@@ -67,15 +76,17 @@ input[type=text]{
     width: 200px;
     height: 40px;
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     font-size: 20px;
     font-weight: 800;
     color: rgb(212, 212, 207);
     background: linear-gradient(to right bottom, rgb(176, 176, 176),rgb(61, 60, 60));
+    transition: background 1s;
 }
 #check:hover{
     cursor: pointer;
+    background: linear-gradient(to right bottom, rgb(36, 28, 28),rgb(48, 47, 47));
 }
 
 .result-Container{
@@ -87,6 +98,9 @@ input[type=text]{
     left: 50%;
     transform: translate(-50%,-50%);
     color: rgb(255, 255, 255);
+    box-shadow: 3px 3px rgb(154, 151, 151) inset;
+    /* outline:  solid gray; */
+    /* outline:0px 3px 3px 0px solid gray ; */
 }
 #result{
     color: white;
@@ -94,7 +108,24 @@ input[type=text]{
 }
 #result-text{
     margin-top: 30px;
+    background: rgb(135, 135, 135);
 
+}
+
+.sjct{
+    font-size: 18px;
+    margin-top: 50px;
+    color: rgb(185, 249, 249);
+}
+.min::before{
+    color: rgb(0, 255, 0);
+
+    content: "min-weight(kg) : ";
+
+}
+.max::before{
+    color: rgb(217, 255, 0);
+    content: 'max-weight(kg) : ';
 }
 
 @media screen and (max-width:600px){
